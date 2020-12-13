@@ -6,6 +6,7 @@ import { FormsEpioneComponent } from './components/forms-epione/forms-epione.com
 import { ConvenioFiscoComponent } from './component/convenio-fisco/convenio-fisco.component';
 import { MenuSuperiorComponent } from './component/menu-superior/menu-superior.component';
 import { HomeComponent } from './component/home/home.component';
+import { EvolucaoFiscoComponent } from './component/evolucao-fisco/evolucao-fisco.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { HomeComponent } from './component/home/home.component';
     FormsEpioneComponent,
     ConvenioFiscoComponent,
     MenuSuperiorComponent,
-    HomeComponent
+    HomeComponent,
+    EvolucaoFiscoComponent
   ],
   imports: [
     BrowserModule,
