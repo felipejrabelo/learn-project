@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsEpioneComponent } from './components/forms-epione/forms-epione.component';
 import { ConvenioFiscoComponent } from './component/convenio-fisco/convenio-fisco.component';
+import { MenuSuperiorComponent } from './component/menu-superior/menu-superior.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormsEpioneComponent,
-    ConvenioFiscoComponent
+    ConvenioFiscoComponent,
+    MenuSuperiorComponent
   ],
   imports: [
     BrowserModule
