@@ -7,6 +7,11 @@ import { ConvenioFiscoComponent } from './component/convenio-fisco/convenio-fisc
 import { MenuSuperiorComponent } from './component/menu-superior/menu-superior.component';
 import { HomeComponent } from './component/home/home.component';
 import { EvolucaoFiscoComponent } from './component/evolucao-fisco/evolucao-fisco.component';
+import { MeuCadastroComponent } from './component/meu-cadastro/meu-cadastro.component';
+import { ConvenioPlanAssisteComponent } from './component/convenio-plan-assiste/convenio-plan-assiste.component';
+import { ConvenioGeapComponent } from './component/convenio-geap/convenio-geap.component';
+import { ConvenioFusexComponent } from './component/convenio-fusex/convenio-fusex.component';
+import { ConvenioTrtSaudeComponent } from './component/convenio-trt-saude/convenio-trt-saude.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +20,12 @@ import { EvolucaoFiscoComponent } from './component/evolucao-fisco/evolucao-fisc
     ConvenioFiscoComponent,
     MenuSuperiorComponent,
     HomeComponent,
-    EvolucaoFiscoComponent
+    EvolucaoFiscoComponent,
+    MeuCadastroComponent,
+    ConvenioPlanAssisteComponent,
+    ConvenioGeapComponent,
+    ConvenioFusexComponent,
+    ConvenioTrtSaudeComponent
   ],
   imports: [
     BrowserModule,

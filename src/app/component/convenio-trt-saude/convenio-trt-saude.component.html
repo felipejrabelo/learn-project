@@ -40,7 +40,7 @@
         </div>
         <div class="col-sm form-group">
             <select class="form-control" id="convenioSelect">
-                <option>FISCO</option>
+                <option>TRT6 SAÚDE</option>
                 <option>OUTRA OPÇÃO</option>
               </select>
         </div>
@@ -119,14 +119,6 @@
         </div>
     </div>
     <div class="row pdd-top">
-        <div class="col-sm">
-            Identificador
-        </div>
-        <div class="col-sm">
-             
-        </div>
-    </div>
-    <div class="row pdd-top">
         <div class="col-sm-6">
             4 - Data da Autorização:
         </div>
@@ -134,19 +126,9 @@
             <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="datePic" placeholder="dd/mm/aaaa">
         </div>
     </div>
-
-    <div class="row pdd-top">
-        <div class="col-sm">
-            5 - Senha:
-            <small class="form-text text-muted">A Senha é obrigatória para toda guia. Se esta é Complementar, informe aqui a Senha da Guia Principal</small>
-        </div>
-        <div class="col-sm">
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-    </div>
     <div class="row pdd-top">
         <div class="col-sm-6">
-            6 - Data de Validade da Senha:
+            7 - Data de Emissão da Guia:
         </div>
         <div class="col-sm-4">
             <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="datePic" placeholder="dd/mm/aaaa">
@@ -154,34 +136,118 @@
     </div>
     <div class="row pdd-top">
         <div class="col-sm">
-            7 - Nº da Guia Atribuído pela Operadora:
-            <small class="form-text text-muted">Informe o número da guia física.</small>
-        </div>
-        <div class="col-sm">
-            <input type="text" class="form-control">
-        </div>
-    </div>
-    <div class="row pdd-top">
-        <div class="col-sm">
             8 - Número da Carteira:
         </div>
         <div class="col-sm">
-            0345432001867903
+            0
             <small class="form-text text-muted">Este campo não é digitável. Caso este difira de sua Guia, informe imediatamente a Secretaria! </small>
         </div>
     </div>
     <div class="row pdd-top">
-       <div class="col-sm">
-            Código do Procedimento 1 (Campo 25)
+        <div class="col-sm-6">
+            Data/hora da solicitação:
+        </div>
+        <div class="col-sm-4">
+            <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="datePic" placeholder="dd/mm/aaaa">
+        </div>
+    </div>
+    <div class="row pdd-top">
+       <div class="col-sm-6">
+            32 - Tipo de Atendimento
        </div>
-       <div class="col-sm">
+       <div class="col-sm-4">
             <select class="form-control" id="exampleFormControlSelect1">
-             <option>1 - FISIOTERAPIA MOTORA / 50000268 / 35</option>
-             <option>2 - FISIOTERAPIA RESPIRATÓRIA / 50000276 / 35</option>
-             <option>IRACI BARBOSA DUQUE</option>
+             <option>06 - Atendimento Domiciliar</option>
             </select>
        </div>
     </div>
+    <div class="row pdd-top">
+        <div class="col-sm" style="padding-top: 25px;">
+            Tempo padrão de atendimento (minutos)
+        </div>
+        <div class="col-sm">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  20
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                  30
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                  45
+                </label>
+              </div>
+        </div>
+    </div>
+    <div class="row pdd-top">
+        <div class="col-sm-6">
+             Carater da solicitação
+        </div>
+        <div class="col-sm-4">
+             <select class="form-control" id="exampleFormControlSelect1">
+              <option>Eletiva</option>
+             </select>
+        </div>
+     </div>
+     <div class="row pdd-top">
+        <div class="col-sm-6">
+             Indicação de Acidente
+        </div>
+        <div class="col-sm-4">
+             <select class="form-control" id="exampleFormControlSelect1">
+              <option>Outros</option>
+             </select>
+        </div>
+     </div>
+     <div class="row pdd-top">
+        <div class="col-sm-6">
+             Tipo de Saída
+        </div>
+        <div class="col-sm-4">
+             <select class="form-control" id="exampleFormControlSelect1">
+              <option>Retorno SADT</option>
+             </select>
+        </div>
+     </div>
+     <div class="row pdd-top">
+        <div class="col-sm-6">
+             Tipo de Doença
+        </div>
+        <div class="col-sm-4">
+             <select class="form-control" id="exampleFormControlSelect1">
+              <option>Crônica</option>
+             </select>
+        </div>
+     </div>
+     <div class="row pdd-top">
+        <div class="col-sm-6">
+             Tempo da Doença
+        </div>
+        <div class="col-sm-4">
+             <select class="form-control" id="exampleFormControlSelect1">
+              <option>Dias</option>
+             </select>
+        </div>
+     </div>
+     <div class="row pdd-top">
+        <div class="col-sm">
+             Código do Procedimento 1 (Campo 25)
+        </div>
+        <div class="col-sm">
+             <select class="form-control" id="exampleFormControlSelect1">
+              <option>1 - FISIOTERAPIA MOTORA / 50000268 / 35</option>
+              <option>2 - FISIOTERAPIA RESPIRATÓRIA / 50000276 / 35</option>
+              <option>IRACI BARBOSA DUQUE</option>
+             </select>
+        </div>
+     </div>
     <div class="row pdd-top">
         <div class="col-sm">
             Quantidade solicitada 1 (Campo 27)
@@ -235,18 +301,6 @@
         <div class="col-sm">
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
-    </div>
-    <div class="row pdd-top">
-        <div class="col-sm">
-            32 - Tipo de Atendimento:
-        </div>
-        <div class="col-sm">
-            <select class="form-control" id="exampleFormControlSelect1">
-             <option>01 - Remoção </option>
-             <option>2 - FISIOTERAPIA RESPIRATÓRIA / 50000276 / 35</option>
-             <option>IRACI BARBOSA DUQUE</option>
-            </select>
-       </div>
     </div>
     <div class="row pdd-top">
         <div class="col-sm">
