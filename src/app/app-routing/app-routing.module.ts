@@ -5,10 +5,12 @@ import { HomeComponent } from '../component/home/home.component';
 import { ConvenioFiscoComponent } from '../component/convenio-fisco/convenio-fisco.component';
 import { EvolucaoFiscoComponent } from '../component/evolucao-fisco/evolucao-fisco.component';
 import { MeuCadastroComponent } from '../component/meu-cadastro/meu-cadastro.component';
+import { TelaLoginComponent } from '../component/tela-login/tela-login.component';
 
 const routes: Routes = [
 
-  { path: '', component: HomeComponent },
+  { path: '', component: TelaLoginComponent },
+  { path: 'home', component: HomeComponent},
   { path: 'convenio-fisco', component: ConvenioFiscoComponent },
   { path: 'evolucao-fisco', component: EvolucaoFiscoComponent },
   { path: 'meu-cadastro', component: MeuCadastroComponent }

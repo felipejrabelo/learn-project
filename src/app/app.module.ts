@@ -12,6 +12,8 @@ import { ConvenioPlanAssisteComponent } from './component/convenio-plan-assiste/
 import { ConvenioGeapComponent } from './component/convenio-geap/convenio-geap.component';
 import { ConvenioFusexComponent } from './component/convenio-fusex/convenio-fusex.component';
 import { ConvenioTrtSaudeComponent } from './component/convenio-trt-saude/convenio-trt-saude.component';
+import { TelaLoginComponent } from './component/tela-login/tela-login.component';
+import { NavbarHomeComponent } from './component/navbar-home/navbar-home.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ConvenioTrtSaudeComponent } from './component/convenio-trt-saude/conven
     ConvenioPlanAssisteComponent,
     ConvenioGeapComponent,
     ConvenioFusexComponent,
-    ConvenioTrtSaudeComponent
+    ConvenioTrtSaudeComponent,
+    TelaLoginComponent,
+    NavbarHomeComponent
   ],
   imports: [
     BrowserModule,

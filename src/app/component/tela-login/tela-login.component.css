@@ -1,0 +1,37 @@
+.container{
+    padding-top: 40px;
+
+}
+
+.card{
+    border-radius: 0;
+    margin: 0 auto 50px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.card-container{
+    max-width: 360px;
+    padding: 40px;
+    background-color: #e6eeff;
+}
+
+.form-control{
+    border-radius: 0;
+}
+
+.btn-login{
+    font: 'Roboto';
+    text-transform: uppercase;
+    outline: 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 0;
+}
+
+.message{
+    
+    text-align: center;
+    margin: 20px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
