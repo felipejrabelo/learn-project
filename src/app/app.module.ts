@@ -14,6 +14,10 @@ import { ConvenioFusexComponent } from './component/convenio-fusex/convenio-fuse
 import { ConvenioTrtSaudeComponent } from './component/convenio-trt-saude/convenio-trt-saude.component';
 import { TelaLoginComponent } from './component/tela-login/tela-login.component';
 import { NavbarHomeComponent } from './component/navbar-home/navbar-home.component';
+import { MeusDadosComponent } from './component/meus-dados/meus-dados.component';
+import { MeuEnderecoComponent } from './component/meu-endereco/meu-endereco.component';
+import { MinhaInfoComponent } from './component/minha-info/minha-info.component';
+import { MeuTissComponent } from './component/meu-tiss/meu-tiss.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { NavbarHomeComponent } from './component/navbar-home/navbar-home.compone
     ConvenioFusexComponent,
     ConvenioTrtSaudeComponent,
     TelaLoginComponent,
-    NavbarHomeComponent
+    NavbarHomeComponent,
+    MeusDadosComponent,
+    MeuEnderecoComponent,
+    MinhaInfoComponent,
+    MeuTissComponent
   ],
   imports: [
     BrowserModule,
