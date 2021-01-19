@@ -24,14 +24,14 @@
         </div>
     </div>
 </div>
-<div class="container align-left" style="padding-top: 40px; margin-bottom: 80px;">
+<div [formGroup]="fiscoForm" class="container align-left" style="padding-top: 40px; margin-bottom: 80px;">
     <div class="row">
         <div class="col-sm">
             Cooperado
         </div>
         <div class="col-sm form-group">
-            <select class="form-control" id="cooperadoSelect">
-                <option>ADILMA FABIANE GOMES PEREIRA</option>
+            <select class="form-control" id="cooperadoSelect" formControlName="cooperado">
+                <option>{{ fiscoForm.get('cooperado').value }}</option>
                 <option>OUTRA OPÇÃO</option>
               </select>
         </div>
@@ -53,7 +53,7 @@
             <small class="form-text text-muted">Selecione o paciente para que seja exibido o número da carteira. O paciente deve estar configurado no módulo Meus Pacientes.</small>
         </div>
         <div class="col-sm form-group">
-            <select class="form-control" id="exampleFormControlSelect1">
+            <select class="form-control" id="pacienteSelect" formControlName="paciente">
                 <option>ALDA COSTA LIMA FALCÃO</option>
                 <option>IRACI BARBOSA DUQUE</option>
                 <option>IRACI BARBOSA DUQUE</option>
@@ -65,7 +65,7 @@
             Mês de faturamento 
         </div>
         <div class="col-sm-4">
-            <input type="dataMes" class="form-control form-control-sm" id="inputMes" placeholder="mm">
+            <input type="dataMes" class="form-control form-control-sm" id="inputMes" placeholder="mm" formControlName="mesFaturamento">
         </div>
     </div>
     <div class="row pdd-top">
@@ -73,7 +73,7 @@
             Ano de Faturamento
         </div>
         <div class="col-sm-4">
-            <input type="dataAno" class="form-control form-control-sm" id="inputAno" placeholder="aaaa">
+            <input type="dataAno" class="form-control form-control-sm" id="inputAno" placeholder="aaaa" formControlName="anoFaturamento">
         </div>
     </div>
     <div class="row pdd-top">
@@ -83,14 +83,14 @@
         </div>
         <div class="col-sm">
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                <label class="form-check-label" for="exampleRadios1">
+                <input class="form-check-input" type="radio" name="tipoGuia" id="tipoguia" value="principal" checked formControlName="tipoGuia">
+                <label class="form-check-label" for="tipoguiabranca">
                   Principal (Branca)
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                <label class="form-check-label" for="exampleRadios2">
+                <input class="form-check-input" type="radio" name="tipoGuia" id="tipoguia" value="complementar" formControlName="tipoGuia">
+                <label class="form-check-label" for="tipoguiaverde">
                   Complementar (Verde)
                 </label>
               </div>
@@ -109,7 +109,7 @@
             2 - Nº Guia do Prestador: 
         </div>
         <div class="col-sm">
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="9999999999">
+            <input type="text" class="form-control" placeholder="9999999999" formControlName="nGuiaPrestador">
         </div>
     </div>
     <div class="row pdd-top">
@@ -117,7 +117,7 @@
             3 - Nº Guia Principal:
         </div>
         <div class="col-sm">
-            <input type="text" class="form-control" aria-describedby="emailHelp">
+            <input type="text" class="form-control" formControlName="nGuiaPrincipal">
         </div>
     </div>
     <div class="row pdd-top">
@@ -133,7 +133,7 @@
             4 - Data da Autorização:
         </div>
         <div class="col-sm-4">
-            <input type="date" class="form-control" aria-describedby="datePic" placeholder="dd/mm/aaaa">
+            <input type="date" class="form-control" aria-describedby="datePic" placeholder="dd/mm/aaaa" formControlName="dataAutorizacao">
         </div>
     </div>
 
@@ -143,7 +143,7 @@
             <small class="form-text text-muted">A Senha é obrigatória para toda guia. Se esta é Complementar, informe aqui a Senha da Guia Principal</small>
         </div>
         <div class="col-sm">
-            <input type="text" class="form-control" aria-describedby="emailHelp">
+            <input type="text" class="form-control" formControlName="senhaGuia">
         </div>
     </div>
     <div class="row pdd-top">
@@ -151,7 +151,7 @@
             6 - Data de Validade da Senha:
         </div>
         <div class="col-sm-4">
-            <input type="date" class="form-control" aria-describedby="datePic" placeholder="dd/mm/aaaa">
+            <input type="date" class="form-control" aria-describedby="datePic" placeholder="dd/mm/aaaa" formControlName="validadeSenha">
         </div>
     </div>
     <div class="row pdd-top">
@@ -160,7 +160,7 @@
             <small class="form-text text-muted">Informe o número da guia física.</small>
         </div>
         <div class="col-sm">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" formControlName="nGuiaOperadora">
         </div>
     </div>
     <div class="row pdd-top">
@@ -168,7 +168,7 @@
             8 - Número da Carteira:
         </div>
         <div class="col-sm">
-            0345432001867903
+            {{ fiscoForm.get('nCarteira').value }} 
             <small class="form-text text-muted">Este campo não é digitável. Caso este difira de sua Guia, informe imediatamente a Secretaria! </small>
         </div>
     </div>
@@ -177,7 +177,7 @@
             Código do Procedimento 1 (Campo 25)
        </div>
        <div class="col-sm">
-            <select class="form-control" id="exampleFormControlSelect1">
+            <select class="form-control" id="codProcedimentoSelect" formControlName="codProcedimentoUm">
              <option>1 - FISIOTERAPIA MOTORA / 50000268 / 35</option>
              <option>2 - FISIOTERAPIA RESPIRATÓRIA / 50000276 / 35</option>
              <option>IRACI BARBOSA DUQUE</option>
@@ -189,7 +189,7 @@
             Quantidade solicitada 1 (Campo 27)
         </div>
         <div class="col-sm">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" formControlName="qtdSolicitadaUm">
         </div>
     </div>
     <div class="row pdd-top">
@@ -197,7 +197,7 @@
             Quantidade autorizada 1 (Campo 28)
         </div>
         <div class="col-sm">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" formControlName="qtdAutorizadaUm">
         </div>
     </div>
     <div class="row pdd-top">
@@ -205,7 +205,7 @@
              Código do Procedimento 2 (Campo 25)
         </div>
         <div class="col-sm">
-             <select class="form-control" id="exampleFormControlSelect1">
+             <select class="form-control" id="codProcedimentoDoisSelect" formControlName="codProcedimentoDois">
               <option>1 - FISIOTERAPIA MOTORA / 50000268 / 35</option>
               <option>2 - FISIOTERAPIA RESPIRATÓRIA / 50000276 / 35</option>
               <option>IRACI BARBOSA DUQUE</option>
@@ -217,7 +217,7 @@
             Quantidade solicitada 2 (Campo 27)
         </div>
         <div class="col-sm">
-            <input type="text" class="form-control" placeholder="0">
+            <input type="text" class="form-control" placeholder="0" formControlName="qtdSolicitadaDois">
             <small class="form-text text-muted">Informar apenas se consta um 2º procedimento na Guia.</small>
         </div>
     </div>
@@ -226,7 +226,7 @@
             Quantidade autorizada 2 (Campo 28)
         </div>
         <div class="col-sm">
-            <input type="text" class="form-control" placeholder="0">
+            <input type="text" class="form-control" placeholder="0" formControlName="qtdAutorizadaDois">
             <small class="form-text text-muted">Informar apenas se consta um 2º procedimento na Guia.</small>
         </div>
     </div>
@@ -235,7 +235,7 @@
             Observação
         </div>
         <div class="col-sm">
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="observacao"></textarea>
         </div>
     </div>
     <div class="row pdd-top">
@@ -243,7 +243,7 @@
             32 - Tipo de Atendimento:
         </div>
         <div class="col-sm">
-            <select class="form-control" id="exampleFormControlSelect1">
+            <select class="form-control" id="tipoAtendimentoSelect" formControlName="tipoAtendimento">
              <option>01 - Remoção </option>
              <option>2 - FISIOTERAPIA RESPIRATÓRIA / 50000276 / 35</option>
              <option>IRACI BARBOSA DUQUE</option>

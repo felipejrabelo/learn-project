@@ -18,6 +18,7 @@ import { MeusDadosComponent } from './component/meus-dados/meus-dados.component'
 import { MeuEnderecoComponent } from './component/meu-endereco/meu-endereco.component';
 import { MinhaInfoComponent } from './component/minha-info/minha-info.component';
 import { MeuTissComponent } from './component/meu-tiss/meu-tiss.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { MeuTissComponent } from './component/meu-tiss/meu-tiss.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
