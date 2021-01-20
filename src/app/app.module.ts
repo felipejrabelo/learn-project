@@ -19,6 +19,7 @@ import { MeuEnderecoComponent } from './component/meu-endereco/meu-endereco.comp
 import { MinhaInfoComponent } from './component/minha-info/minha-info.component';
 import { MeuTissComponent } from './component/meu-tiss/meu-tiss.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SelecaoConvenioComponent } from './component/selecao-convenio/selecao-convenio.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MeusDadosComponent,
     MeuEnderecoComponent,
     MinhaInfoComponent,
-    MeuTissComponent
+    MeuTissComponent,
+    SelecaoConvenioComponent
   ],
   imports: [
     BrowserModule,

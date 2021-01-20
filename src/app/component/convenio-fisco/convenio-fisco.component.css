@@ -6,3 +6,12 @@
     margin-right: 30px;
 }
 
+.fundo{
+    
+    padding-top: 40px;
+    height: calc(100% - 56px);
+    height: 720px !important;
+    background-size: cover;
+    background-image: url(../../../assets/rect74.png);
+}
+

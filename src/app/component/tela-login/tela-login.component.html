@@ -1,23 +1,24 @@
 <app-navbar-home></app-navbar-home>
 
-
-<div class="container">
-    <div class="card card-container">
-        <form action="signin" class="form-signin">
-            <div class="form-group">
-                <input type="email" class="form-control" placeholder="Email">
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" placeholder="Senha">
-            </div>
-            <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Matenha-me conectado</label>
-            </div>
-            <button type="submit" class="btn btn-success btn-login" routerLink="home">Login</button>
-            <div class="form-group">
-                <p class="message">Não tem uma conta? <a href="#">Registre-se</a></p>
-            </div>
-        </form>
+<div class="fundo">
+    <div class="container">
+        <div class="card card-container">
+            <form action="signin" class="form-signin" [formGroup]="loginForm">
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email" formControlName="login">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Senha" formControlName="senha">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Matenha-me conectado</label>
+                </div>
+                <button type="submit" class="btn btn-success btn-login" routerLink="home">Login</button>
+                <div class="form-group">
+                    <p class="message">Não tem uma conta? <a href="#">Registre-se</a></p>
+                </div>
+            </form>
+        </div>
     </div>
 </div>

@@ -1,3 +1,7 @@
+.container{
+    padding-top: 40px;
+   
+}
 
 .fundo{
     
@@ -12,7 +16,14 @@
     border-radius: 0;
     margin: 0 auto 50px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    max-width: 360px;
+}
+
+.card-container{
+    max-width: 400px;
     padding: 40px;
     background-color: #e6eeff;
+}
+
+.row{
+    padding-bottom: 30px;
 }

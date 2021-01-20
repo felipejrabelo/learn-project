@@ -14,11 +14,14 @@ import { ConvenioFusexComponent } from '../component/convenio-fusex/convenio-fus
 import { ConvenioGeapComponent } from '../component/convenio-geap/convenio-geap.component';
 import { ConvenioPlanAssisteComponent } from '../component/convenio-plan-assiste/convenio-plan-assiste.component';
 import { ConvenioTrtSaudeComponent } from '../component/convenio-trt-saude/convenio-trt-saude.component';
+import { SelecaoConvenioComponent } from '../component/selecao-convenio/selecao-convenio.component';
 
 const routes: Routes = [
 
   { path: '', component: TelaLoginComponent },
+  
   { path: 'home', component: HomeComponent},
+  { path: 'selecao-convenio', component: SelecaoConvenioComponent },
   { path: 'convenio-fisco', component: ConvenioFiscoComponent },
   { path: 'evolucao-fisco', component: EvolucaoFiscoComponent },
   { path: 'convenio-fusex', component: ConvenioFusexComponent },
