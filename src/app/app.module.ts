@@ -20,6 +20,7 @@ import { MinhaInfoComponent } from './component/minha-info/minha-info.component'
 import { MeuTissComponent } from './component/meu-tiss/meu-tiss.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SelecaoConvenioComponent } from './component/selecao-convenio/selecao-convenio.component';
+import { ConvenioSassepeComponent } from './component/convenio-sassepe/convenio-sassepe.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { SelecaoConvenioComponent } from './component/selecao-convenio/selecao-c
     MeuEnderecoComponent,
     MinhaInfoComponent,
     MeuTissComponent,
-    SelecaoConvenioComponent
+    SelecaoConvenioComponent,
+    ConvenioSassepeComponent
   ],
   imports: [
     BrowserModule,

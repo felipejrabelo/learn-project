@@ -6,9 +6,9 @@
     </h4>
 </div>
 
-<ul class="nav nav-tabs container" style="margin-top: 15px;">
+<ul class="nav nav-tabs container" style="padding-top: 30px;">
     <li class="nav-item">
-      <a class="nav-link" routerLink="/meus-dados" >Dados Pessoais</a>
+      <a class="nav-link" routerLink="/meu-cadastro" >Dados Pessoais</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" routerLink="../endereco">Endereço</a>
@@ -21,7 +21,7 @@
     </li>   
 </ul>
 
-<div class="container" style="margin-top: 30px;">
+<div [formGroup]="formMeuTiss" class="container" style="margin-top: 30px;">
     <div class="row">
         <div class="col-md-2">
             Código CBOS 
@@ -35,7 +35,7 @@
             Sigla do conselho profissional
         </div>
         <div class="col-md-3">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" formControlName="siglaConselho">
         </div>
     </div>
    <div class="row" style="margin-top: 25px;">
@@ -43,13 +43,13 @@
         Número do conselho profissional
        </div>
        <div class="col-md-3">
-           <input type="text" class="form-control">
+           <input type="text" class="form-control" formControlName="nConselho">
        </div>
        <div class="col-md-3">
            UF do conselho
        </div>
        <div class="col-md-3">
-           <select class="form-control">
+           <select class="form-control" formControlName="ufConselho">
                <option >PE</option>
            </select>
        </div>
@@ -65,7 +65,7 @@
             Id empresa
         </div>
         <div class="col-md-3">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" formControlName="idEmpresa">
         </div>
     </div>
     <div class="row" style="margin-top: 25px;">
@@ -73,13 +73,13 @@
         Orgão Classe Nome
         </div>
         <div class="col-md-3">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" formControlName="orgaoNome">
         </div>
         <div class="col-md-3">
             Orgão Classe UF
         </div>
         <div class="col-md-3">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" formControlName="orgaoUf">
         </div>
     </div>
 </div>

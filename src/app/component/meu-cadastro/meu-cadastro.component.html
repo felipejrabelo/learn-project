@@ -1,1 +1,163 @@
 <app-menu-superior></app-menu-superior>
+
+<div class="container">
+    <h4>
+        Meu Cadastro
+    </h4>
+</div>
+
+<ul class="nav nav-tabs container" style="padding-top: 30px;">
+    <li class="nav-item">
+      <a class="nav-link active">Dados pessoais</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="./endereco">Endereço</a>
+    </li>  
+    <li class="nav-item">
+        <a class="nav-link">Outras informações</a> 
+    </li>
+    <li class="nav-item">
+        <a class="nav-link">TISS</a>
+    </li>
+</ul>
+
+<div [formGroup]="formMeuCadastro" class="container" style="padding-top: 40px; margin-bottom: 80px;">
+
+    <div class="row pdd-top">
+        <div class="col-md-1">
+            Nome
+        </div>
+        <div class="col-md-5">
+            <input type="text" class="form-control" value="ADILMA FABIANE GOMES PEREIRA WILLMERSDORF" formControlName="nome">
+        </div>
+        <div class="col-md-1">
+            Profissão
+        </div>
+        <div class="col-md-5">
+            <select class="form-control" name="profissao" id="profissaoSelect" formControlName="profissao">
+                <option value="FISIOTERAPEUTA">FISIOTERAPEUTA</option>
+            </select>
+        </div>
+    </div>
+    <div class="row pdd-top">
+       
+    </div>
+    <div class="row pdd-top">
+        <div class="col-sm-3">
+            Situação
+        </div>
+        <div class="col-sm-3">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="situacao" id="" value="Ativo" checked formControlName="situacao">
+                <label class="form-check-label" for="situacao">Ativo</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="situacao" id="" value="Inativo" formControlName="situacao">
+                <label class="form-check-label" for="situacao">Inativo</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="situacao" id="" value="Falecido" formControlName="situacao">
+                <label class="form-check-label" for="situacao">Falecido</label>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            Sexo
+        </div>
+        <div class="col-sm-3">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sexo" id="" value="Feminino" checked formControlName="sexo">
+                <label class="form-check-label" for="sexo">Feminino</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sexo" id="" value="Masculino" formControlName="sexo">
+                <label class="form-check-label" for="sexo">Masculino</label>
+            </div>
+        </div>
+       
+    </div>
+    <div class="row pdd-top">
+        <div class="col-sm-3">
+            Login
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" type="text" value="CREFITO26882" formControlName="login">
+        </div>
+        <div class="col-sm-3">
+            Grupo do usuário
+        </div>
+        <div class="col-sm-3">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="grupoUsuario" id="" value="Cooperado" formControlName="grupoUsuario">
+                <label class="form-check-label" for="grupoUsuario">Cooperado</label>
+            </div>
+        </div>
+    </div>
+    <div class="row pdd-top">
+        <div class="col-sm-3">
+            Celular
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" type="text" value="08199946810" formControlName="celular">
+        </div>
+        <div class="col-sm-3">
+            Telefone
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" type="text" value="08130391643" formControlName="telefone">
+        </div>
+        
+    </div>
+    <div class="row pdd-top">
+        <div class="col-sm-3">
+            Cic
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" type="text" value="704.950.254-53" formControlName="cic">
+        </div>
+        <div class="col-sm-3">
+            Data de Nascimento
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" type="text" value="03/05/1971" formControlName="dataNascimento">
+        </div>
+    </div>
+    <div class="row pdd-top">
+        <div class="col-sm-3">
+            RG
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" type="text" value="3948263" formControlName="rg">
+        </div>
+        <div class="col-sm-3">
+            Matrícula
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" type="text" value="031" formControlName="matricula">
+        </div>
+    </div>
+    <div class="row pdd-top">
+        <div class="col-sm-3">
+            Data de Início
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" type="text" value="01/02/2005" formControlName="dataInicio">
+        </div>
+        <div class="col-sm-3">
+            Email
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" type="text" value="fabi@willmersdorf.net" formControlName="email">
+        </div>
+    </div>
+    <div class="row pdd-top">
+        <div class="col-md-3">
+            Descrição Sucinta das atividades
+        </div>
+        <div class="col-md-9">
+            <input class="form-control" type="text" value="FISIOTERAPIA">
+        </div>
+    </div>
+    <div class="row pdd-top">
+        <button class="btn btn-primary" href="#">Salvar</button>
+    </div>
+</div>

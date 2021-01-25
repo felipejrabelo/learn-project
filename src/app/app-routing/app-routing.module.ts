@@ -15,6 +15,7 @@ import { ConvenioGeapComponent } from '../component/convenio-geap/convenio-geap.
 import { ConvenioPlanAssisteComponent } from '../component/convenio-plan-assiste/convenio-plan-assiste.component';
 import { ConvenioTrtSaudeComponent } from '../component/convenio-trt-saude/convenio-trt-saude.component';
 import { SelecaoConvenioComponent } from '../component/selecao-convenio/selecao-convenio.component';
+import { ConvenioSassepeComponent } from '../component/convenio-sassepe/convenio-sassepe.component';
 
 const routes: Routes = [
 
@@ -28,11 +29,12 @@ const routes: Routes = [
   { path: 'convenio-geap', component: ConvenioGeapComponent },
   { path: 'convenio-planAssist', component: ConvenioPlanAssisteComponent },
   { path: 'convenio-trt', component: ConvenioTrtSaudeComponent },
+  { path: 'convenio-sassepe', component: ConvenioSassepeComponent },
   { path: 'meu-cadastro', component: MeuCadastroComponent },
   { path: 'meus-dados', component: MeusDadosComponent},
-  { path: 'meus-dados/endereco', component: MeuEnderecoComponent},
-  { path: 'meus-dados/info', component: MinhaInfoComponent},
-  { path: 'meus-dados/tiss', component: MeuTissComponent}
+  { path: 'meu-cadastro/endereco', component: MeuEnderecoComponent},
+  { path: 'meu-cadastro/info', component: MinhaInfoComponent},
+  { path: 'meu-cadastro/tiss', component: MeuTissComponent}
 
 ];
 
