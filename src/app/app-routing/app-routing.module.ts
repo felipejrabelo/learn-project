@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'selecao-convenio', component: SelecaoConvenioComponent },
   { path: 'convenio-fisco', component: ConvenioFiscoComponent },
-  { path: 'evolucao-fisco', component: EvolucaoFiscoComponent },
+  
   { path: 'convenio-fusex', component: ConvenioFusexComponent },
   { path: 'convenio-geap', component: ConvenioGeapComponent },
   { path: 'convenio-planAssist', component: ConvenioPlanAssisteComponent },

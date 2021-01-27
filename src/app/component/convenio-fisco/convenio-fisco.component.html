@@ -1,14 +1,7 @@
 <app-menu-superior></app-menu-superior>
 
 
-<ul class="nav nav-tabs container">
-    <li class="nav-item">
-      <a class="nav-link active" [ngClass]="{'active': !mostrarEvolucao}" (click)="capa()" style="cursor: pointer;">Capa da Guia</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" [ngClass]="{'active': mostrarEvolucao}" (click)="evolucao()" style="cursor: pointer;">Evoluções de 1 a 10</a>
-    </li>  
-</ul>
+
 <div class="container" style="padding-top: 40px;">
     <div class="row">
         <div class="col-sm">
@@ -25,6 +18,15 @@
         </div>
     </div>
 </div>
+
+<ul class="nav nav-tabs container" style="padding-top: 30px;">
+    <li class="nav-item">
+      <a class="nav-link active" [ngClass]="{'active': !mostrarEvolucao}" (click)="capa()" style="cursor: pointer;">Capa da Guia</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [ngClass]="{'active': mostrarEvolucao}" (click)="evolucao()" style="cursor: pointer;">Evoluções de 1 a 10</a>
+    </li>  
+</ul>
 
 <div [ngClass]="{'esconder': mostrarEvolucao}">
     <div [formGroup]="fiscoForm" class="container align-left" style="padding-top: 40px; margin-bottom: 20px;">

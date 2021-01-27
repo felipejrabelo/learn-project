@@ -8,6 +8,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ConvenioPlanAssisteComponent implements OnInit {
 
+  mostrarEvolucao: boolean = false;
+
   planAssistForm = new FormGroup ({
     cooperado: new FormControl(null, Validators.required),
     paciente: new FormControl(null, Validators.required),
@@ -32,11 +34,89 @@ export class ConvenioPlanAssisteComponent implements OnInit {
     tipoAtendimento: new FormControl(null, Validators.required),
     tempoAtendimento: new FormControl(null, Validators.required),
 
-
   })
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  evolucao(){
+    this.mostrarEvolucao = true;
+  }
+  capa(){
+    this.mostrarEvolucao = false;
+  }
+  
+  checkCampos(){
+    if(this.planAssistForm.get('cooperado').value === ""){
+      this.planAssistForm.get('cooperado').setValue(null);
+    }
+    if(this.planAssistForm.get('paciente').value === ""){
+      this.planAssistForm.get('paciente').setValue(null);
+    }
+    if(this.planAssistForm.get('mesFaturamento').value === ''){
+      this.planAssistForm.get('mesFaturamento').setValue(null);
+    }
+    if(this.planAssistForm.get('anoFaturamento').value == ""){
+      this.planAssistForm.get('anoFaturamento').setValue(null);
+    }
+    if(this.planAssistForm.get('tipoGuia').value == ""){
+      this.planAssistForm.get('tipoGuia').setValue(null);
+    }
+    if(this.planAssistForm.get('dataHoraLimite').value == ""){
+      this.planAssistForm.get('dataHoraLimite').setValue(null);
+    }
+    if(this.planAssistForm.get('registroANS').value == ""){
+      this.planAssistForm.get('registroANS').setValue(null);
+    }
+    if(this.planAssistForm.get('nGuiaPrestador').value == ""){
+      this.planAssistForm.get('nGuiaPrestador').setValue(null);
+    }
+    if(this.planAssistForm.get('nGuiaPrincipal').value == ""){
+      this.planAssistForm.get('nGuiaPrincipal').setValue(null);
+    }
+    if(this.planAssistForm.get('dataAutorizacao').value == ""){
+      this.planAssistForm.get('dataAutorizacao').setValue(null);
+    }
+    if(this.planAssistForm.get('senhaGuia').value == ""){
+      this.planAssistForm.get('senhaGuia').setValue(null);
+    }
+    if(this.planAssistForm.get('validadeSenha').value == ""){
+      this.planAssistForm.get('validadeSenha').setValue(null);
+    }
+    if(this.planAssistForm.get('nGuiaOperadora').value == ""){
+      this.planAssistForm.get('nGuiaOperadora').setValue(null);
+    }
+    if(this.planAssistForm.get('nCarteira').value == ""){
+      this.planAssistForm.get('nCarteira').setValue(null);
+    }
+    if(this.planAssistForm.get('codProcedimentoUm').value == ""){
+      this.planAssistForm.get('codProcedimentoUm').setValue(null);
+    }
+    if(this.planAssistForm.get('qtdSolicitadaUm').value == ""){
+      this.planAssistForm.get('qtdSolicitadaUm').setValue(null);
+    }
+    if(this.planAssistForm.get('qtdAutorizadaUm').value == ""){
+      this.planAssistForm.get('qtdAutorizadaUm').setValue(null);
+    }
+    if(this.planAssistForm.get('codProcedimentoDois').value == ""){
+      this.planAssistForm.get('codProcedimentoDois').setValue(null);
+    }
+    if(this.planAssistForm.get('qtdSolicitadaDois').value == ""){
+      this.planAssistForm.get('qtdSolicitadaDois').setValue(null);
+    }
+    if(this.planAssistForm.get('qtdAutorizadaDois').value == ""){
+      this.planAssistForm.get('qtdAutorizadaDois').setValue(null);
+    }
+    if(this.planAssistForm.get('observacao').value == ""){
+      this.planAssistForm.get('observacao').setValue(null);
+    }
+    if(this.planAssistForm.get('tipoAtendimento').value == ""){
+      this.planAssistForm.get('tipoAtendimento').setValue(null);
+    }
+    if(this.planAssistForm.get('tempoAtendimento').value == ""){
+      this.planAssistForm.get('tempoAtendimento').setValue(null);
+    }
+  }  
 
 }

@@ -22,6 +22,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SelecaoConvenioComponent } from './component/selecao-convenio/selecao-convenio.component';
 import { ConvenioSassepeComponent } from './component/convenio-sassepe/convenio-sassepe.component';
 import { EvolucaoSassepeComponent } from './component/evolucao-sassepe/evolucao-sassepe.component';
+import { EvolucaoFusexComponent } from './component/evolucao-fusex/evolucao-fusex.component';
+import { EvolucaoGeapComponent } from './component/evolucao-geap/evolucao-geap.component';
+import { EvolucaoPlanAssisteComponent } from './component/evolucao-plan-assiste/evolucao-plan-assiste.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,10 @@ import { EvolucaoSassepeComponent } from './component/evolucao-sassepe/evolucao-
     MeuTissComponent,
     SelecaoConvenioComponent,
     ConvenioSassepeComponent,
-    EvolucaoSassepeComponent
+    EvolucaoSassepeComponent,
+    EvolucaoFusexComponent,
+    EvolucaoGeapComponent,
+    EvolucaoPlanAssisteComponent
   ],
   imports: [
     BrowserModule,
