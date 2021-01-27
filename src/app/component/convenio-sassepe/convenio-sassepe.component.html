@@ -18,7 +18,7 @@
             <button type="submit" class="btn btn-primary mb-2">Cria/Atualiza a Guia</button>
         </div>
         <div class="col-sm-3">
-            <button type="submit" class="btn btn-primary mb-2">Gerar Relatório Detalhado</button>
+            <button type="submit" class="btn btn-primary">Gerar Relatório Detalhado</button>
         </div>
         <div class="col-sm-1">
             <button type="submit" class="btn btn-secondary mb-2">Sair</button>
@@ -28,395 +28,405 @@
 
 <ul class="nav nav-tabs container" style="padding-top: 30px;">
     <li class="nav-item">
-      <a class="nav-link active">Capa da Guia</a>
+      <a class="nav-link" [ngClass]="{'active': !mostrarEvolucao}" (click)="capa()" style="cursor: pointer;">Capa da Guia</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="../evolucao-fisco" routerLinkActive="active">Evoluções de 1 a 10</a>
+      <a class="nav-link" [ngClass]="{'active': mostrarEvolucao}" (click)="evolucao()" style="cursor: pointer;">Evoluções de 1 a 10</a>
     </li>  
 </ul>
 
-<div [formGroup]="sassepeForm" class="container align-left" style="padding-top: 40px; margin-bottom: 80px;">
-    <div class="row">
-        <div class="col-sm-6">
-            Convênio
-        </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" value="SASSEPE">
-        </div>
-    </div>
-    <div class="row pdd-top">
-        <div class="col-sm">
-            Cooperado
-        </div>
-        <div class="col-sm form-group">
-            <select class="form-control" id="cooperadoSelect" formControlName="cooperado">
-                <option>ADILMA FABIANE GOMES PEREIRA WILLMERSDORF</option>
-                <option>OUTRA OPÇÃO</option>
-              </select>
-        </div>
-    </div>
-    <div class="row pdd-top">
-        <div class="col-sm">
-             Código do Procedimento 1 (Campo 26)
-        </div>
-        <div class="col-sm">
-             <select class="form-control" id="codProcedimentoSelect" formControlName="codProcedimentoUm">
-              <option>1 - FISIOTERAPIA MOTORA / 50000268 / 35</option>
-              <option>2 - FISIOTERAPIA RESPIRATÓRIA / 50000276 / 35</option>
-              <option>IRACI BARBOSA DUQUE</option>
-             </select>
-        </div>
-     </div>
-     <div class="row pdd-top">
-         <div class="col-sm">
-             Quantidade solicitada 1 (Campo 28)
-         </div>
-         <div class="col-sm">
-             <input type="text" class="form-control" formControlName="qtdSolicitadaUm">
-         </div>
-     </div>
-     <div class="row pdd-top">
-         <div class="col-sm">
-             Quantidade autorizada 1 (Campo 29)
-         </div>
-         <div class="col-sm">
-             <input type="text" class="form-control" formControlName="qtdAutorizadaUm">
-         </div>
-     </div>
-     <div class="row pdd-top">
-         <div class="col-sm">
-              Código do Procedimento 2 (Campo 26)
-         </div>
-         <div class="col-sm">
-              <select class="form-control" id="codProcedimentoDoisSelect" formControlName="codProcedimentoDois">
-               <option>1 - FISIOTERAPIA MOTORA / 50000268 / 35</option>
-               <option>2 - FISIOTERAPIA RESPIRATÓRIA / 50000276 / 35</option>
-               <option>IRACI BARBOSA DUQUE</option>
-              </select>
-         </div>
-      </div>
-      <div class="row pdd-top">
-         <div class="col-sm">
-             Quantidade solicitada 2 (Campo 28)
-         </div>
-         <div class="col-sm">
-             <input type="text" class="form-control" placeholder="0" formControlName="qtdSolicitadaDois">
-             <small class="form-text text-muted">Informar apenas se consta um 2º procedimento na Guia.</small>
-         </div>
-     </div>
-      <div class="row pdd-top">
-         <div class="col-sm">
-             Quantidade autorizada 2 (Campo 29)
-         </div>
-         <div class="col-sm">
-             <input type="text" class="form-control" placeholder="0" formControlName="qtdAutorizadaDois">
-             <small class="form-text text-muted">Informar apenas se consta um 2º procedimento na Guia.</small>
-         </div>
-     </div>
 
-    <div class="row">
-        <div class="col-sm-6">
-            1 - Registro ANS
+<div [ngClass]="{'esconder': mostrarEvolucao}">
+    <div [formGroup]="sassepeForm" class="container align-left" style="padding-top: 40px; margin-bottom: 80px;">
+        <div class="row">
+            <div class="col-sm-6">
+                Convênio
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" formControlName="convenio">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" formControlName="">
+        <div class="row pdd-top">
+            <div class="col-sm">
+                Cooperado
+            </div>
+            <div class="col-sm form-group">
+                <select class="form-control" id="cooperadoSelect" formControlName="cooperado">
+                    <option></option>
+                    <option>OUTRA OPÇÃO</option>
+                </select>
+            </div>
         </div>
-    </div>
-
-    <div class="row pdd-top">
-        <div class="col-sm">
-            2 - Nº Guia do Prestador: 
-        </div>
-        <div class="col-sm">
-            <input type="text" class="form-control" placeholder="9999999999" formControlName="nGuiaPrestador">
-        </div>
-    </div>
-
-    <div class="row pdd-top">
-        <div class="col-sm">
-            Paciente
-            <small class="form-text text-muted">Selecione o paciente para que seja exibido o número da carteira. O paciente deve estar configurado no módulo Meus Pacientes.</small>
-        </div>
-        <div class="col-sm form-group">
-            <select class="form-control" id="pacienteSelect" formControlName="paciente">
-                <option>ALDA COSTA LIMA FALCÃO</option>
+        <div class="row pdd-top">
+            <div class="col-sm">
+                Código do Procedimento 1 (Campo 26)
+            </div>
+            <div class="col-sm">
+                <select class="form-control" id="codProcedimentoSelect" formControlName="codProcedimentoUm">
+                <option>1 - FISIOTERAPIA MOTORA / 50000268 / 35</option>
+                <option>2 - FISIOTERAPIA RESPIRATÓRIA / 50000276 / 35</option>
                 <option>IRACI BARBOSA DUQUE</option>
+                </select>
+            </div>
+        </div>
+        <div class="row pdd-top">
+            <div class="col-sm">
+                Quantidade solicitada 1 (Campo 28)
+            </div>
+            <div class="col-sm">
+                <input type="text" class="form-control" formControlName="qtdSolicitadaUm">
+            </div>
+        </div>
+        <div class="row pdd-top">
+            <div class="col-sm">
+                Quantidade autorizada 1 (Campo 29)
+            </div>
+            <div class="col-sm">
+                <input type="text" class="form-control" formControlName="qtdAutorizadaUm">
+            </div>
+        </div>
+        <div class="row pdd-top">
+            <div class="col-sm">
+                Código do Procedimento 2 (Campo 26)
+            </div>
+            <div class="col-sm">
+                <select class="form-control" id="codProcedimentoDoisSelect" formControlName="codProcedimentoDois">
+                <option>1 - FISIOTERAPIA MOTORA / 50000268 / 35</option>
+                <option>2 - FISIOTERAPIA RESPIRATÓRIA / 50000276 / 35</option>
                 <option>IRACI BARBOSA DUQUE</option>
-              </select>
+                </select>
+            </div>
         </div>
-    </div>
+        <div class="row pdd-top">
+            <div class="col-sm">
+                Quantidade solicitada 2 (Campo 28)
+            </div>
+            <div class="col-sm">
+                <input type="text" class="form-control" placeholder="0" formControlName="qtdSolicitadaDois">
+                <small class="form-text text-muted">Informar apenas se consta um 2º procedimento na Guia.</small>
+            </div>
+        </div>
+        <div class="row pdd-top">
+            <div class="col-sm">
+                Quantidade autorizada 2 (Campo 29)
+            </div>
+            <div class="col-sm">
+                <input type="text" class="form-control" placeholder="0" formControlName="qtdAutorizadaDois">
+                <small class="form-text text-muted">Informar apenas se consta um 2º procedimento na Guia.</small>
+            </div>
+        </div>
 
-    <div class="row pdd-top justify-content">
-        <div class="col-sm-6">
-            4 - Data da autorização
+        <div class="row">
+            <div class="col-sm-6">
+                1 - Registro ANS
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" formControlName="registroANS">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="dataMes" class="form-control form-control-sm" id="inputMes" formControlName="dataAutorizacao">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm">
-            5 - Senha:
-            <small class="form-text text-muted">A Senha é obrigatória para toda guia. Se esta é Complementar, informe aqui a Senha da Guia Principal</small>
+        <div class="row pdd-top">
+            <div class="col-sm">
+                2 - Nº Guia do Prestador: 
+            </div>
+            <div class="col-sm">
+                <input type="text" class="form-control" placeholder="9999999999" formControlName="nGuiaPrestador">
+            </div>
         </div>
-        <div class="col-sm">
-            <input type="text" class="form-control" formControlName="senhaGuia">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-            6 - Data de Validade da Senha:
+        <div class="row pdd-top">
+            <div class="col-sm">
+                Paciente
+                <small class="form-text text-muted">Selecione o paciente para que seja exibido o número da carteira. O paciente deve estar configurado no módulo Meus Pacientes.</small>
+            </div>
+            <div class="col-sm form-group">
+                <select class="form-control" id="pacienteSelect" formControlName="paciente">
+                    <option>ALDA COSTA LIMA FALCÃO</option>
+                    <option>IRACI BARBOSA DUQUE</option>
+                    <option>IRACI BARBOSA DUQUE</option>
+                </select>
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="date" class="form-control" aria-describedby="datePic" placeholder="dd/mm/aaaa" formControlName="validadeSenha">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-            7 - Data de Emissão da Guia
+        <div class="row pdd-top justify-content">
+            <div class="col-sm-6">
+                4 - Data da autorização
+            </div>
+            <div class="col-sm-6">
+                <input type="dataMes" class="form-control" id="inputMes" formControlName="dataAutorizacao">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="date" class="form-control" aria-describedby="datePic" placeholder="dd/mm/aaaa" formControlName="dataEmissao">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm">
-            8 - Número da Carteira:
+        <div class="row pdd-top">
+            <div class="col-sm">
+                5 - Senha:
+                <small class="form-text text-muted">A Senha é obrigatória para toda guia. Se esta é Complementar, informe aqui a Senha da Guia Principal</small>
+            </div>
+            <div class="col-sm">
+                <input type="text" class="form-control" formControlName="senhaGuia">
+            </div>
         </div>
-        <div class="col-sm">
-            <input type="text" class="form-control" formControlName="nCarteira">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-            9 - Plano
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+                6 - Data de Validade da Senha:
+            </div>
+            <div class="col-sm-6">
+                <input type="date" class="form-control" aria-describedby="datePic" placeholder="dd/mm/aaaa" formControlName="validadeSenha">
+            </div>
         </div>
-        <div class="col-sm-4">
-            <input type="dataAno" class="form-control form-control-sm" value="SASSEPE">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-            Validade da Carteira
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+                7 - Data de Emissão da Guia
+            </div>
+            <div class="col-sm-6">
+                <input type="date" class="form-control" aria-describedby="datePic" placeholder="dd/mm/aaaa" formControlName="dataEmissao">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="date" class="form-control" aria-describedby="datePic" placeholder="dd/mm/aaaa" formControlName="validadeCarteira">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-            13 - Código da Operadora/CNPJ/CPF
+        <div class="row pdd-top">
+            <div class="col-sm">
+                8 - Número da Carteira:
+            </div>
+            <div class="col-sm">
+                <input type="text" class="form-control" formControlName="nCarteira">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" value="1220" formControlName="codOperador">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-            14 - Nome Contratado
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+                9 - Plano
+            </div>
+            <div class="col-sm-6">
+                <input type="dataAno" class="form-control" value="SASSEPE">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" value="HSE-HOSPITAL DOS SERVIDORES DO ESTADO" formControlName="nomeContratado">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-            15 - Código CNES
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+                Validade da Carteira
+            </div>
+            <div class="col-sm-6">
+                <input type="date" class="form-control" aria-describedby="datePic" placeholder="dd/mm/aaaa" formControlName="validadeCarteira">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" formControlName="codCNES">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-            16 - Nome do Profissional Solicitante
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+                13 - Código da Operadora/CNPJ/CPF
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" value="1220" formControlName="codOperador">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" formControlName="nomeProfissionalSolicitante">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-            18 - Número do Conselho
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+                14 - Nome Contratado
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" value="HSE-HOSPITAL DOS SERVIDORES DO ESTADO" formControlName="nomeContratado">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" formControlName="nConselho">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-           19 - UF
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+                15 - Código CNES
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" formControlName="codCNES">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" value="PE" formControlName="uf">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-            20 - Código CBOS
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+                16 - Nome do Profissional Solicitante
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" formControlName="nomeProfissionalSolicitante">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" formControlName="codCBOS">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-            17 - Conselho Profissional
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+                18 - Número do Conselho
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" formControlName="nConselho">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" formControlName="conselhoProfissional">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-            21 - Data e Hora da Solicitação
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+            19 - UF
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" value="PE" formControlName="uf">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" formControlName="dataHoraSolicitacao">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-            22 - Caráter da Solicitação
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+                20 - Código CBOS
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" formControlName="codCBOS">
+            </div>
         </div>
-        <div class="col-sm-6">
-            E
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-            23 - CID 10
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+                17 - Conselho Profissional
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" formControlName="conselhoProfissional">
+            </div>
         </div>
-        <div class="col-sm-6">
-          I64
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-           24 - Indicação Clínica
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+                21 - Data e Hora da Solicitação
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" formControlName="dataHoraSolicitacao">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" value="FISIO/FONO" formControlName="indicacaoClinica">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-           30 - Código na Operadora/CNPJ/CPF
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+                22 - Caráter da Solicitação
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" value="E" formControlName="caraterSolicitacao">
+            </div>
         </div>
-        <div class="col-sm-6">
-            6106171000186
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-           31 - Nome Contratado
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+                23 - CID 10
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" value="I64" formControlName="cid">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" value="COOPFISIO COOPERATIVA DOS FISOTERAPEUTAS E TERAPEUTAS..." formControlName="nomeContratadoDois">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-          40 - Código CNES
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+            24 - Indicação Clínica
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" value="FISIO/FONO" formControlName="indicacaoClinica">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" value="5683718" formControlName="codCNESDois">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-          40a - Código operadora/CPF Exec. Complementar
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+            30 - Código na Operadora/CNPJ/CPF
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" value="6106171000186" formControlName="codNaOperadora">  
+            </div>
         </div>
-        <div class="col-sm-6">
-            70495025453
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-          41 - Nome do Profissional Executante(Complementar 1)
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+            31 - Nome Contratado
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" value="COOPFISIO COOPERATIVA DOS FISOTERAPEUTAS E TERAPEUTAS..." formControlName="nomeContratadoDois">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" value="ADILMA FABIANE GOMES PEREIRA WILLMERSDORF" formControlName="nomeProfissionalExecutante">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-         42- Conselho Profissional (Complementar 1)
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+            40 - Código CNES
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" value="5683718" formControlName="codCNESDois">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" value="CFREFITO" formControlName="conselhoProfissionalComplementar">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-         43 - Número do Conselho Profissional
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+            40a - Código operadora/CPF Exec. Complementar
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" value="70495025453" formControlName="codOperadoraComplementar">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" value="26882" formControlName="nConselhoProfissional">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-          44 - UF (Profissional Complementar 1) 
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+            41 - Nome do Profissional Executante(Complementar 1)
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" value="ADILMA FABIANE GOMES PEREIRA WILLMERSDORF" formControlName="nomeProfissionalExecutante">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" value="PE" formControlName="ufProfissional">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-            45 - Código CBOS (Profissional Complementar 1)
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+            42- Conselho Profissional (Complementar 1)
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" value="CFREFITO" formControlName="conselhoProfissionalComplementar">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" value="223605" formControlName="codCBOSProfissional">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-         46 - Tipo de Agendamento
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+            43 - Número do Conselho Profissional
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" value="26882" formControlName="nConselhoProfissional">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" value="06" formControlName="tipoAgendamento">
-        </div>
-    </div>
 
-    <div class="row pdd-top">
-        <div class="col-sm-6">
-          48 - Tipo de Saída
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+            44 - UF (Profissional Complementar 1) 
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" value="PE" formControlName="ufProfissional">
+            </div>
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" value="2" formControlName="tipoSaida">
-        </div>
-    </div>
 
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+                45 - Código CBOS (Profissional Complementar 1)
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" value="223605" formControlName="codCBOSProfissional">
+            </div>
+        </div>
+
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+            46 - Tipo de Agendamento
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" value="06" formControlName="tipoAgendamento">
+            </div>
+        </div>
+
+        <div class="row pdd-top">
+            <div class="col-sm-6">
+            48 - Tipo de Saída
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" value="2" formControlName="tipoSaida">
+            </div>
+        </div>    
+    </div>
+</div>
+
+<div [ngClass]="{'esconder': !mostrarEvolucao}">
+    <app-evolucao-sassepe></app-evolucao-sassepe>
+</div>
+
+
+<div class="container" style="margin-bottom: 70px;">
     <div class="row pdd-top">
         <div class="col-sm-2">
             <button type="submit" class="btn btn-primary mb-2">Imprime Guia</button>
@@ -425,7 +435,7 @@
             <button type="submit" class="btn btn-primary mb-2">Consutar Evoluções</button>
         </div>
         <div class="col-sm-3">
-            <button type="submit" class="btn btn-primary mb-2">Cria/Atualiza a Guia</button>
+            <button type="submit" class="btn btn-primary mb-2" (click)="onSubmit()">Cria/Atualiza a Guia</button>
         </div>
         <div class="col-sm-3">
             <button type="submit" class="btn btn-primary mb-2">Gerar Relatório Detalhado</button>

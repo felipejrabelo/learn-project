@@ -21,6 +21,7 @@ import { MeuTissComponent } from './component/meu-tiss/meu-tiss.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SelecaoConvenioComponent } from './component/selecao-convenio/selecao-convenio.component';
 import { ConvenioSassepeComponent } from './component/convenio-sassepe/convenio-sassepe.component';
+import { EvolucaoSassepeComponent } from './component/evolucao-sassepe/evolucao-sassepe.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ConvenioSassepeComponent } from './component/convenio-sassepe/convenio-
     MinhaInfoComponent,
     MeuTissComponent,
     SelecaoConvenioComponent,
-    ConvenioSassepeComponent
+    ConvenioSassepeComponent,
+    EvolucaoSassepeComponent
   ],
   imports: [
     BrowserModule,

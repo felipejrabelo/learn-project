@@ -8,6 +8,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class ConvenioFiscoComponent implements OnInit {
 
+  mostrarEvolucao: boolean = false;
+
   fiscoForm = new FormGroup ({
     cooperado: new FormControl(null, Validators.required),
     paciente: new FormControl(null, Validators.required),
@@ -38,15 +40,16 @@ export class ConvenioFiscoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.preencherCampos();
+   
   }
 
-  preencherCampos(){
-    this.fiscoForm.patchValue({
-      cooperado: 'ADILMA FABIANE GOMES PEREIRA',
-      nCarteira: '0345432001867903'
-    })
+  evolucao(){
+    this.mostrarEvolucao = true;
   }
+  capa(){
+    this.mostrarEvolucao = false;
+  }
+
   
 
 }

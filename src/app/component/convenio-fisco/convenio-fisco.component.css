@@ -15,3 +15,13 @@
     background-image: url(../../../assets/rect74.png);
 }
 
+.esconder{
+    display: none;
+}
+
+
+.mostrar{
+    display: inline-block;
+}
+
+
