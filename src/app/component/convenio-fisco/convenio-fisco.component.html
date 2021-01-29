@@ -255,6 +255,31 @@
                 </select>
             </div>
         </div>
+        <div class="row pdd-top">
+            <div class="col-sm" style="padding-top: 25px;">
+                Tempo padrão de atendimento (minutos)
+            </div>
+            <div class="col-sm">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tempoAtendimento" id="tempoAtendimentoCheck" value="vinte" formControlName="tempoAtendimento" checked>
+                    <label class="form-check-label" >
+                      20
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tempoAtendimento" id="tempoAtendimentoCheck" value="trinta" formControlName="tempoAtendimento">
+                    <label class="form-check-label">
+                      30
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tempoAtendimento" id="tempoAtendimentoCheck" value="quarentaecinco" formControlName="tempoAtendimento">
+                    <label class="form-check-label">
+                      45
+                    </label>
+                  </div>
+            </div>
+        </div>
     </div>
 </div>
 <div [ngClass]="{'esconder': !mostrarEvolucao}">

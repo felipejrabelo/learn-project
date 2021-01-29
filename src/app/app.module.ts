@@ -25,6 +25,7 @@ import { EvolucaoSassepeComponent } from './component/evolucao-sassepe/evolucao-
 import { EvolucaoFusexComponent } from './component/evolucao-fusex/evolucao-fusex.component';
 import { EvolucaoGeapComponent } from './component/evolucao-geap/evolucao-geap.component';
 import { EvolucaoPlanAssisteComponent } from './component/evolucao-plan-assiste/evolucao-plan-assiste.component';
+import { EvolucaoTrtComponent } from './component/evolucao-trt/evolucao-trt.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { EvolucaoPlanAssisteComponent } from './component/evolucao-plan-assiste/
     EvolucaoSassepeComponent,
     EvolucaoFusexComponent,
     EvolucaoGeapComponent,
-    EvolucaoPlanAssisteComponent
+    EvolucaoPlanAssisteComponent,
+    EvolucaoTrtComponent
   ],
   imports: [
     BrowserModule,

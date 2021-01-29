@@ -6,3 +6,11 @@
     margin-right: 30px;
 }
 
+.esconder{
+    display: none;
+}
+
+
+.mostrar{
+    display: inline-block;
+}

@@ -9,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class EvolucaoFusexComponent implements OnInit {
 
   formEvolucaoFusex = new FormGroup({
-    tempoAtendimento: new FormControl(null, Validators.required),
+    
     dataAtendimentoUm: new FormControl(null, Validators.required),
     codProcedimentoUm: new FormControl(null, Validators.required),
     condutaUm: new FormControl(null, Validators.required),

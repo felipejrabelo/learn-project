@@ -1,6 +1,8 @@
 
-<div [formGroup]="formEvolucaoFisco" class="container" style="padding-top: 40px; margin-bottom: 20px;">
+<div [formGroup]="formEvolucaoTrt" class="container" style="padding-top: 40px; margin-bottom: 20px;">
+    <div class="row" style="padding-top: 25px;">
 
+    </div>
     <div class="row" style="padding-top: 20px;">
         <div class="col-sm-6">
             Data de atendimento 1 (campo 36)
@@ -14,9 +16,25 @@
             Código de procedimento 1 (campo 40)
         </div>
         <div class="col-sm form-group">
-            <select class="form-control" id="evolucaoUmSelect" formControlName="codProcedimentoUm">
+            <select class="form-control" formControlName="codProcedimentoUm">
                 <option>1 - FISIOTERAPIA MOTORA / 2501030 / 57</option>
             </select>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Inicial 1
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaInicialUm">
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Final 1
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaFinalUm">
         </div>
     </div>
     <div class="row" style="padding-top: 20px;">
@@ -40,9 +58,25 @@
             Código de procedimento 2 (campo 40)
         </div>
         <div class="col-sm form-group">
-            <select class="form-control" id="evolucaoDoisSelect" formControlName="codProcedimentoDois">
+            <select class="form-control" formControlName="codProcedimentoDois">
                 <option>1 - FISIOTERAPIA MOTORA / 2501030 / 57</option>
             </select>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Inicial 2
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaInicialDois">
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Final 2
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaFinalDois">
         </div>
     </div>
     <div class="row" style="padding-top: 20px;">
@@ -58,7 +92,7 @@
             Data de atendimento 3 (campo 36)
         </div>
         <div class="col-sm-4">
-            <input type="date" class="form-control" aria-describedby="datePic" placeholder="dd/mm/aaaa" formControlName="dataAtendimentoTres"> 
+            <input type="date" class="form-control" aria-describedby="datePic" placeholder="dd/mm/aaaa" formControlName="dataAtendimentoTres">
         </div>
     </div>
     <div class="row" style="padding-top: 20px;">
@@ -66,9 +100,25 @@
             Código de procedimento 3 (campo 40)
         </div>
         <div class="col-sm form-group">
-            <select class="form-control" id="evolucaoTresSelect" formControlName="codProcedimentoTres">
+            <select class="form-control" formControlName="codProcedimentoTres">
                 <option>1 - FISIOTERAPIA MOTORA / 2501030 / 57</option>
             </select>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Inicial 3
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaInicialTres">
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Final 3
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaFinalTres">
         </div>
     </div>
     <div class="row" style="padding-top: 20px;">
@@ -92,9 +142,25 @@
             Código de procedimento 4 (campo 40)
         </div>
         <div class="col-sm form-group">
-            <select class="form-control" id="evolucaoQuatroSelect" formControlName="codProcedimentoQuatro">
+            <select class="form-control" formControlName="codProcedimentoQuatro">
                 <option>1 - FISIOTERAPIA MOTORA / 2501030 / 57</option>
             </select>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Inicial 4
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaInicialQuatro">
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Final 4
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaFinalQuatro">
         </div>
     </div>
     <div class="row" style="padding-top: 20px;">
@@ -118,9 +184,25 @@
             Código de procedimento 5 (campo 40)
         </div>
         <div class="col-sm form-group">
-            <select class="form-control" id="evolucaoCincoSelect" formControlName="codProcedimentoCinco">
+            <select class="form-control" formControlName="codProcedimentoCinco">
                 <option>1 - FISIOTERAPIA MOTORA / 2501030 / 57</option>
             </select>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Inicial 5
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaInicialCinco">
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Final 5
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaFinalCinco">
         </div>
     </div>
     <div class="row" style="padding-top: 20px;">
@@ -144,9 +226,25 @@
             Código de procedimento 6 (campo 40)
         </div>
         <div class="col-sm form-group">
-            <select class="form-control" id="evolucaoSeisSelect" formControlName="codProcedimentoSeis">
+            <select class="form-control" formControlName="codProcedimentoSeis">
                 <option>1 - FISIOTERAPIA MOTORA / 2501030 / 57</option>
             </select>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Inicial 6
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaInicialSeis">
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Final 6
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaFinalSeis">
         </div>
     </div>
     <div class="row" style="padding-top: 20px;">
@@ -170,9 +268,25 @@
             Código de procedimento 7 (campo 40)
         </div>
         <div class="col-sm form-group">
-            <select class="form-control" id="evolucaoSeteSelect" formControlName="codProcedimentoSete">
+            <select class="form-control" formControlName="codProcedimentoSete">
                 <option>1 - FISIOTERAPIA MOTORA / 2501030 / 57</option>
             </select>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Inicial 7
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaInicialSete">
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Final 7
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaFinalSete">
         </div>
     </div>
     <div class="row" style="padding-top: 20px;">
@@ -196,9 +310,25 @@
             Código de procedimento 8 (campo 40)
         </div>
         <div class="col-sm form-group">
-            <select class="form-control" id="evolucaoOitoSelect" formControlName="codProcedimentoOito">
+            <select class="form-control" formControlName="codProcedimentoOito">
                 <option>1 - FISIOTERAPIA MOTORA / 2501030 / 57</option>
             </select>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Inicial 8
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaInicialOito">
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Final 8
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaFinalOito">
         </div>
     </div>
     <div class="row" style="padding-top: 20px;">
@@ -222,9 +352,25 @@
             Código de procedimento 9 (campo 40)
         </div>
         <div class="col-sm form-group">
-            <select class="form-control" id="evolucaoNoveSelect" formControlName="codProcedimentoNove">
+            <select class="form-control" formControlName="codProcedimentoNove">
                 <option>1 - FISIOTERAPIA MOTORA / 2501030 / 57</option>
             </select>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Inicial 9
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaInicialNove">
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Final 9
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaFinalNove">
         </div>
     </div>
     <div class="row" style="padding-top: 20px;">
@@ -248,9 +394,25 @@
             Código de procedimento 10 (campo 40)
         </div>
         <div class="col-sm form-group">
-            <select class="form-control" id="evolucaoDezSelect" formControlName="codProcedimentoDez">
+            <select class="form-control" formControlName="codProcedimentoDez">
                 <option>1 - FISIOTERAPIA MOTORA / 2501030 / 57</option>
             </select>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Inicial 10
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaInicialDez">
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-sm">
+            Hora Final 10
+        </div>
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="00:00" formControlName="horaFinalDez">
         </div>
     </div>
     <div class="row" style="padding-top: 20px;">
@@ -258,7 +420,7 @@
             Conduta 10
         </div>
         <div class="col-sm">
-            <textarea class="form-control" rows="4" formControlName="condutaDez"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" formControlName="condutaDez"></textarea>
         </div>
     </div>
 </div>
